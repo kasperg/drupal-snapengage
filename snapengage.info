@@ -1,0 +1,3 @@
+name = "SnapEngage"
+description = Adds a SnapEngage widget to your site's pages.
+core = 6.x
