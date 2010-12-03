@@ -13,7 +13,7 @@
 function snapengage_menu() {
   $items['admin/settings/snapengage'] = array(
     'title' => 'SnapEngage',
-    'description' => 'Configure the settings used to generate your Google Analytics tracking code.',
+    'description' => 'Configure the settings used to add a SnapEngage widget to your site.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('snapengage_admin_settings_form'),
     'access arguments' => array('administer snapengage'),
@@ -40,7 +40,7 @@ function snapengage_footer($main = 0) {
 
   $id = variable_get('snapengage_widget_id', '');
 
-  // 1. Check if the SnapEngage account number has a value.
+  // 1. Check if the SnapEngage widget id has a value.
   // 2. Track page views based on visibility value.
   // 3. Check if we should track the currently active user's role.
   if (!empty($id) && _snapengage_visibility_pages() && _snapengage_visibility_roles($user)) {
